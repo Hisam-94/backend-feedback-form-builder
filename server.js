@@ -15,6 +15,10 @@ app.use(express.json());
 app.use('/api/forms', formRoutes);
 const PORT = process.env.PORT || 8000;
 
+app.get('/',(req,res)=>{
+  res.send('Welcome to The Alter Office')
+})
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
